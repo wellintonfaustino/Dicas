@@ -14,7 +14,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
   - [Gerar SSH e Instalar o Git](Linux/GerarSSHInstalarGithub.md)
   - [Liberação FTP e OpenSSH](Linux/FTPOpenSSH.md)
   - [Liberação de Portas com UFW](Linux/PortasComUFW.md)
-  - [navegação e Crud de arquivos](Linux/NavegacaoLinux.md)
+  - [Navegação e Crud de arquivos](Linux/NavegacaoLinux.md)
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
