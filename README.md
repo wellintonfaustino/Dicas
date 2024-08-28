@@ -10,7 +10,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
 
 - **Linux**  
   Contém dicas e comandos úteis para quem trabalha com o sistema operacional Linux.
-  - [Comandos do Linux](linux/comandos.md)
+  - [Gerar SSH e instalar git](Linux/GerarSSHInstalarGithub.md)
 
 ## 📝 Contribuições
 
