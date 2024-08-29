@@ -15,6 +15,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
   - [Liberação FTP e OpenSSH](Linux/FTPOpenSSH.md)
   - [Liberação de Portas com UFW](Linux/PortasComUFW.md)
   - [Navegação e Crud de arquivos](Linux/NavegacaoLinux.md)
+  - [Navegação e Crud de arquivos](Linux/ConexaoRemotaRDP.md)
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
