@@ -16,6 +16,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
   - [Liberação de Portas com UFW](Linux/PortasComUFW.md)
   - [Navegação e Crud de arquivos](Linux/NavegacaoLinux.md)
   - [Conexão remota Gnome (RDP)](Linux/ConexaoRemotaRDP.md)
+  - [Instalação do NodeJS](Linux/InstalarNodeJS.md)
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
