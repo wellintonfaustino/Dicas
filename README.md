@@ -17,6 +17,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
   - [Navegação e Crud de arquivos](Linux/NavegacaoLinux.md)
   - [Conexão remota Gnome (RDP)](Linux/ConexaoRemotaRDP.md)
   - [Instalação do NodeJS](Linux/InstalarNodeJS.md)
+  - [Instalação do DBeaver](Linux/InstalarNodeJS.md)
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
