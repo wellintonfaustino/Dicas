@@ -19,6 +19,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
   - [Instalação do NodeJS](Linux/InstalarNodeJS.md)
   - [Instalação do DBeaver](Linux/Dbeaver.md)
   - [Instalação do Mysql](Linux/Mysql.md)
+  - [Instalação do Chrome](Linux/InstalarChrome.md)
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
