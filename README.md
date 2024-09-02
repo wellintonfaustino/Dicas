@@ -18,6 +18,7 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
   - [Conexão remota Gnome (RDP)](Linux/ConexaoRemotaRDP.md)
   - [Instalação do NodeJS](Linux/InstalarNodeJS.md)
   - [Instalação do DBeaver](Linux/Dbeaver.md)
+  - [Instalação do Mysql](Linux/Mysql.md)
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
