@@ -21,7 +21,12 @@ Este repositório tem como objetivo reunir diversas dicas e truques de programa�
 
 - **Github**  
   Contém dicas e comandos úteis para quem trabalha com o GitHub.
+
   - [Comandos](Github/Comandos.md)
+
+- **NPM**  
+  Contém dicas e comandos úteis para o NodeJS e o NPM, assim como bibliotecas.
+  - [Pm2](NodeJS/PM2.md)
 
 ## 📝 Contribuições
 
