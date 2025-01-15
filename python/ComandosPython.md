@@ -1,319 +1,176 @@
-# Python Commands Cheat Sheet
+# Python CLI Commands Cheat Sheet
 
-Este documento apresenta um tutorial abrangente de comandos Python, explicando o que cada um faz. Ideal para iniciantes e desenvolvedores intermediários!
+Este documento apresenta um tutorial sobre os comandos da linha de comando (CLI) do Python, explicando suas funcionalidades. Ideal para desenvolvedores que utilizam o terminal para interagir com o Python!
 
 ---
 
-## **1. Comandos Básicos**
+## **1. Executar o Interpretador Python**
 
-### `print()`
+### `python` ou `python3`
 
-- Exibe mensagens ou resultados no console.
+- Inicia o interpretador Python no terminal.
 - **Exemplo:**
-  ```python
-  print("Hello, World!")
-  # Saída: Hello, World!
+  ```bash
+  python
+  # ou
+  python3
   ```
+  - Você entrará no modo interativo do Python onde poderá executar comandos diretamente.
 
-### `input()`
+---
 
-- Recebe entrada do usuário.
+## **2. Verificar a Versão do Python**
+
+### `python --version` ou `python3 --version`
+
+- Exibe a versão instalada do Python.
 - **Exemplo:**
-  ```python
-  nome = input("Digite seu nome: ")
-  print("Olá,", nome)
-  ```
-
-### `type()`
-
-- Retorna o tipo de dado de um objeto.
-- **Exemplo:**
-  ```python
-  print(type(42))
-  # Saída: <class 'int'>
-  ```
-
-### `len()`
-
-- Retorna o comprimento de uma sequência (string, lista, etc.).
-- **Exemplo:**
-  ```python
-  print(len("Python"))
-  # Saída: 6
+  ```bash
+  python --version
+  # Saída: Python 3.x.x
   ```
 
 ---
 
-## **2. Operadores Matemáticos**
+## **3. Executar Scripts Python**
 
-### `+` (Adição)
+### `python script.py` ou `python3 script.py`
 
-- Soma dois valores.
+- Executa um script Python.
 - **Exemplo:**
-  ```python
-  print(5 + 3)
-  # Saída: 8
+  ```bash
+  python script.py
+  ```
+  - Onde `script.py` é o arquivo contendo o código Python.
+
+---
+
+## **4. Instalar Pacotes com `pip`**
+
+### `pip install nome_do_pacote`
+
+- Instala pacotes Python a partir do PyPI.
+- **Exemplo:**
+  ```bash
+  pip install requests
   ```
 
-### `-` (Subtração)
+### `pip list`
 
-- Subtrai dois valores.
+- Lista os pacotes instalados no ambiente Python.
 - **Exemplo:**
-  ```python
-  print(10 - 7)
-  # Saída: 3
+  ```bash
+  pip list
   ```
 
-### `*` (Multiplicação)
+### `pip uninstall nome_do_pacote`
 
-- Multiplica dois valores.
+- Remove um pacote instalado.
 - **Exemplo:**
-  ```python
-  print(4 * 2)
-  # Saída: 8
-  ```
-
-### `/` (Divisão)
-
-- Realiza divisão.
-- **Exemplo:**
-  ```python
-  print(9 / 3)
-  # Saída: 3.0
-  ```
-
-### `//` (Divisão Inteira)
-
-- Retorna apenas a parte inteira da divisão.
-- **Exemplo:**
-  ```python
-  print(10 // 3)
-  # Saída: 3
-  ```
-
-### `%` (Módulo)
-
-- Retorna o resto da divisão.
-- **Exemplo:**
-  ```python
-  print(10 % 3)
-  # Saída: 1
-  ```
-
-### `**` (Exponenciação)
-
-- Eleva um número a uma potência.
-- **Exemplo:**
-  ```python
-  print(2 ** 3)
-  # Saída: 8
+  ```bash
+  pip uninstall requests
   ```
 
 ---
 
-## **3. Controle de Fluxo**
+## **5. Criar e Gerenciar Ambientes Virtuais**
 
-### `if`, `elif`, `else`
+### `python -m venv nome_do_ambiente`
 
-- Estruturas condicionais.
+- Cria um ambiente virtual.
 - **Exemplo:**
-  ```python
-  x = 10
-  if x > 5:
-      print("Maior que 5")
-  elif x == 5:
-      print("Igual a 5")
-  else:
-      print("Menor que 5")
+  ```bash
+  python -m venv meu_ambiente
   ```
 
-### `for`
+### `source nome_do_ambiente/bin/activate` (Linux/Mac) ou `nome_do_ambiente\Scripts\activate` (Windows)
 
-- Loop que itera sobre sequências.
+- Ativa o ambiente virtual.
 - **Exemplo:**
-  ```python
-  for i in range(5):
-      print(i)
-  # Saída: 0, 1, 2, 3, 4
+  ```bash
+  source meu_ambiente/bin/activate
   ```
 
-### `while`
+### `deactivate`
 
-- Loop baseado em condição.
+- Desativa o ambiente virtual.
 - **Exemplo:**
-  ```python
-  count = 0
-  while count < 5:
-      print(count)
-      count += 1
-  ```
-
-### `break`
-
-- Encerra o loop atual.
-- **Exemplo:**
-  ```python
-  for i in range(10):
-      if i == 5:
-          break
-      print(i)
-  ```
-
-### `continue`
-
-- Pula para a próxima iteração.
-- **Exemplo:**
-  ```python
-  for i in range(5):
-      if i == 2:
-          continue
-      print(i)
+  ```bash
+  deactivate
   ```
 
 ---
 
-## **4. Trabalhando com Listas**
+## **6. Iniciar um Servidor HTTP Simples**
 
-### `append()`
+### `python -m http.server`
 
-- Adiciona um elemento ao final da lista.
+- Inicia um servidor HTTP simples na porta 8000.
 - **Exemplo:**
-  ```python
-  lista = [1, 2, 3]
-  lista.append(4)
-  print(lista)
-  # Saída: [1, 2, 3, 4]
+  ```bash
+  python -m http.server
   ```
 
-### `remove()`
+### `python -m http.server 8080`
 
-- Remove a primeira ocorrência de um valor na lista.
+- Especifica a porta para o servidor.
 - **Exemplo:**
-  ```python
-  lista = [1, 2, 3, 4]
-  lista.remove(2)
-  print(lista)
-  # Saída: [1, 3, 4]
-  ```
-
-### `pop()`
-
-- Remove e retorna o último elemento (ou o índice especificado).
-- **Exemplo:**
-  ```python
-  lista = [1, 2, 3]
-  ultimo = lista.pop()
-  print(ultimo)
-  # Saída: 3
-  ```
-
-### `sort()`
-
-- Ordena a lista.
-- **Exemplo:**
-  ```python
-  lista = [3, 1, 4, 2]
-  lista.sort()
-  print(lista)
-  # Saída: [1, 2, 3, 4]
-  ```
-
-### `reverse()`
-
-- Inverte a ordem da lista.
-- **Exemplo:**
-  ```python
-  lista = [1, 2, 3]
-  lista.reverse()
-  print(lista)
-  # Saída: [3, 2, 1]
+  ```bash
+  python -m http.server 8080
   ```
 
 ---
 
-## **5. Funções**
+## **7. Executar um Comando Python**
 
-### `def`
+### `python -c "comando_python"`
 
-- Define uma função.
+- Executa um comando Python diretamente no terminal.
 - **Exemplo:**
-
-  ```python
-  def saudacao(nome):
-      return f"Olá, {nome}!"
-
-  print(saudacao("Maria"))
-  ```
-
-### `lambda`
-
-- Cria funções anônimas.
-- **Exemplo:**
-  ```python
-  soma = lambda x, y: x + y
-  print(soma(2, 3))
-  # Saída: 5
+  ```bash
+  python -c "print('Hello, World!')"
   ```
 
 ---
 
-## **6. Trabalhando com Dicionários**
+## **8. Verificar Módulos Instalados**
 
-### `keys()`
+### `python -m site`
 
-- Retorna as chaves do dicionário.
+- Lista os diretórios de pacotes padrão e locais.
 - **Exemplo:**
-  ```python
-  dicionario = {"nome": "João", "idade": 30}
-  print(dicionario.keys())
-  ```
-
-### `values()`
-
-- Retorna os valores do dicionário.
-- **Exemplo:**
-  ```python
-  print(dicionario.values())
-  ```
-
-### `items()`
-
-- Retorna chaves e valores como tuplas.
-- **Exemplo:**
-  ```python
-  print(dicionario.items())
-  ```
-
-### `get()`
-
-- Retorna o valor de uma chave.
-- **Exemplo:**
-  ```python
-  print(dicionario.get("nome"))
-  # Saída: João
+  ```bash
+  python -m site
   ```
 
 ---
 
-## **7. Manipulação de Arquivos**
+## **9. Depurar Código Python**
 
-### `open()`
+### `python -m pdb script.py`
 
-- Abre um arquivo para leitura ou escrita.
+- Inicia o depurador (debugger) para o script Python.
 - **Exemplo:**
-  ```python
-  with open("arquivo.txt", "r") as file:
-      conteudo = file.read()
-      print(conteudo)
-  ```
-
-### `write()`
-
-- Escreve em um arquivo.
-- **Exemplo:**
-  ```python
-  with open("arquivo.txt", "w") as file:
-      file.write("Olá, arquivo!")
+  ```bash
+  python -m pdb script.py
   ```
 
 ---
+
+## **10. Documentação e Ajuda**
+
+### `python -m pydoc nome_do_módulo`
+
+- Exibe a documentação de um módulo.
+- **Exemplo:**
+  ```bash
+  python -m pydoc math
+  ```
+
+### `python -m pydoc -b`
+
+- Inicia um servidor de documentação acessível via navegador.
+- **Exemplo:**
+  ```bash
+  python -m pydoc -b
+  ```

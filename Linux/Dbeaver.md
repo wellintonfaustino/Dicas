@@ -1,180 +1,57 @@
-# Python CLI Commands Cheat Sheet
+## **_Instalar o Dbeaver_**
 
-Este documento apresenta um tutorial sobre os comandos da linha de comando (CLI) do Python, explicando suas funcionalidades. Ideal para desenvolvedores que utilizam o terminal para interagir com o Python!
+Para baixar e instalar o DBeaver no Ubuntu, você pode seguir os seguintes passos:
 
----
+### 1. Instalação via Snap (Método mais fácil)
 
-## **1. Executar o Interpretador Python**
+A maneira mais simples de instalar o DBeaver no Ubuntu é utilizando o Snap:
 
-### `python` ou `python3`
+1. Abra o terminal no Ubuntu.
+2. Execute o seguinte comando para instalar o DBeaver Community:
 
-- Inicia o interpretador Python no terminal.
-- **Exemplo:**
-  ```bash
-  python
-  # ou
-  python3
-  ```
-  - Você entrará no modo interativo do Python onde poderá executar comandos diretamente.
+   ```bash
+   sudo snap install dbeaver-ce
+   ```
 
----
+Este comando instalará a versão mais recente do DBeaver Community.
 
-## **2. Verificar a Versão do Python**
+### 2. Instalação via Repositório DEB (Método Tradicional)
 
-### `python --version` ou `python3 --version`
+Se você preferir instalar a versão DEB diretamente do repositório oficial do DBeaver:
 
-- Exibe a versão instalada do Python.
-- **Exemplo:**
-  ```bash
-  python --version
-  # Saída: Python 3.x.x
-  ```
+1. Abra o terminal no Ubuntu.
+2. Adicione o repositório oficial e a chave GPG:
 
----
+   ```bash
+   wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
+   echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
+   ```
 
-## **3. Executar Scripts Python**
+3. Atualize o cache dos pacotes e instale o DBeaver:
 
-### `python script.py` ou `python3 script.py`
+   ```bash
+   sudo apt update
+   sudo apt install dbeaver-ce
+   ```
 
-- Executa um script Python.
-- **Exemplo:**
-  ```bash
-  python script.py
-  ```
-  - Onde `script.py` é o arquivo contendo o código Python.
+### 3. Instalação via Pacote DEB (Método Manual)
 
----
+Você também pode baixar o pacote `.deb` diretamente do site do DBeaver e instalar manualmente:
 
-## **4. Instalar Pacotes com `pip`**
+1. Baixe o arquivo `.deb` [neste link](https://dbeaver.io/download/).
+2. Após o download, execute o seguinte comando para instalar:
 
-### `pip install nome_do_pacote`
+   ```bash
+   sudo dpkg -i /caminho/para/o/arquivo/dbeaver-ce_x.x.x_amd64.deb
+   sudo apt-get install -f  # Para corrigir possíveis dependências
+   ```
 
-- Instala pacotes Python a partir do PyPI.
-- **Exemplo:**
-  ```bash
-  pip install requests
-  ```
+### 4. Executando o DBeaver
 
-### `pip list`
+Após a instalação, você pode encontrar o DBeaver no menu de aplicativos ou executá-lo pelo terminal com o comando:
 
-- Lista os pacotes instalados no ambiente Python.
-- **Exemplo:**
-  ```bash
-  pip list
-  ```
+```bash
+dbeaver
+```
 
-### `pip uninstall nome_do_pacote`
-
-- Remove um pacote instalado.
-- **Exemplo:**
-  ```bash
-  pip uninstall requests
-  ```
-
----
-
-## **5. Criar e Gerenciar Ambientes Virtuais**
-
-### `python -m venv nome_do_ambiente`
-
-- Cria um ambiente virtual.
-- **Exemplo:**
-  ```bash
-  python -m venv meu_ambiente
-  ```
-
-### `source nome_do_ambiente/bin/activate` (Linux/Mac) ou `nome_do_ambiente\Scripts\activate` (Windows)
-
-- Ativa o ambiente virtual.
-- **Exemplo:**
-  ```bash
-  source meu_ambiente/bin/activate
-  ```
-
-### `deactivate`
-
-- Desativa o ambiente virtual.
-- **Exemplo:**
-  ```bash
-  deactivate
-  ```
-
----
-
-## **6. Iniciar um Servidor HTTP Simples**
-
-### `python -m http.server`
-
-- Inicia um servidor HTTP simples na porta 8000.
-- **Exemplo:**
-  ```bash
-  python -m http.server
-  ```
-
-### `python -m http.server 8080`
-
-- Especifica a porta para o servidor.
-- **Exemplo:**
-  ```bash
-  python -m http.server 8080
-  ```
-
----
-
-## **7. Executar um Comando Python**
-
-### `python -c "comando_python"`
-
-- Executa um comando Python diretamente no terminal.
-- **Exemplo:**
-  ```bash
-  python -c "print('Hello, World!')"
-  ```
-
----
-
-## **8. Verificar Módulos Instalados**
-
-### `python -m site`
-
-- Lista os diretórios de pacotes padrão e locais.
-- **Exemplo:**
-  ```bash
-  python -m site
-  ```
-
----
-
-## **9. Depurar Código Python**
-
-### `python -m pdb script.py`
-
-- Inicia o depurador (debugger) para o script Python.
-- **Exemplo:**
-  ```bash
-  python -m pdb script.py
-  ```
-
----
-
-## **10. Documentação e Ajuda**
-
-### `python -m pydoc nome_do_módulo`
-
-- Exibe a documentação de um módulo.
-- **Exemplo:**
-  ```bash
-  python -m pydoc math
-  ```
-
-### `python -m pydoc -b`
-
-- Inicia um servidor de documentação acessível via navegador.
-- **Exemplo:**
-  ```bash
-  python -m pydoc -b
-  ```
-
----
-
-Este guia cobre os comandos mais comuns utilizados na CLI para interagir com o Python. Explore e experimente cada comando no seu terminal!
+Esses métodos devem permitir que você instale e comece a usar o DBeaver no seu Ubuntu.
